@@ -6,30 +6,30 @@ print("this app checks your password to see whether it is strong from a security
 
 password = input("enter a password to test: ")
 
-result = []
+result = {}
 
 if len(password) >= 8:
-    result.append(True)
+    result["length"] = True
 else:
-    result.append(False)
+    result["length"] = False
 
 contains_digit = False
 for i in password:
     if i.isdigit():
         contains_digit = True
         break
-
-result.append(contains_digit)
+result["digits"] = contains_digit
 
 contains_cap = False
 for i in password:
     if i.isupper():
         contains_cap = True
         break
+result["capital"] = contains_cap
 
-result.append(contains_cap)
+print(result)
 
-if all(result) == True:
+if all(result.values()):
     print("strong password")
 else:
     print("weak password")
