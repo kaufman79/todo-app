@@ -1,6 +1,9 @@
 # from functions import get_todos, write_todos
 import functions
+import time
 
+now = time.strftime("%b %d, %Y %H:%M:%S")
+print("It is", now)
 while True:
     user_action = input("type add, edit, show, complete, or exit: ")
     user_action = user_action.strip()
@@ -58,7 +61,7 @@ while True:
             print("your command is not valid")
             continue
         except ValueError:
-            print("your command is not valid")
+            print("your command is not valid. Enter a number after your command")
             continue
 
     elif user_action.startswith("exit"):
