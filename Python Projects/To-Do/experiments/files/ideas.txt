@@ -1,0 +1,3 @@
+- simple text based game
+- Grade Latin bounty boards (maybe use Claude?)
+- export obsidian notes as SBL formatted text (with proper footnotes, etc.
