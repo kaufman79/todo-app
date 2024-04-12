@@ -6,10 +6,16 @@ label = sg.Text("Type in a to-do")
 input_box = sg.InputText(tooltip="enter todo")
 add_button = sg.Button("Add")
 
+layout = [
+            [label],
+            [input_box, add_button]
+         ]
+
 # window is the mother instance that contains the objects
 # first arg is app title. layout gets a list of object instances (buttons, text boxes, etc).
-# in layout, inner square brackets list(s) is a row, thus put in separate lists for separate rows
-window = sg.Window("To-Do App", layout=[[label], [input_box, add_button]])
+# in layout, inner square brackets list(s) is a row, thus put in separate lists for separate rows.
+# I used the cookbook for a different way to make the layout (defined above as a variable, input here)
+window = sg.Window("To-Do App", layout)
 
 # this displays the window on the screen
 window.read()
