@@ -10,7 +10,8 @@ def make_archive(filepaths, dest_dir):
     dest_path = pathlib.Path(dest_dir, "compressed.zip")
     with zipfile.ZipFile(dest_path, 'w') as archive:
         for filepath in filepaths:
-            archive.write(filepath)
+            filepath = pathlib.Path(filepath)
+            archive.write(filepath, arcname=filepath.name)
 
 # the below is just to test the function, which is a common thing to do I guess. It wont run unless you execute this
 # file directly (instead of importing the function)

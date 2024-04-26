@@ -10,11 +10,12 @@ input2 = sg.Input()
 choose_button2 = sg.FolderBrowse("Choose", key = "folder") # this is a special button already programmed to browse files
 
 compress_button = sg.Button("Compress")
+output_label = sg.Text(key="output", text_color="green") # empty instance for now. We will update it later in code.
 
 layout = [
             [label1, input1, choose_button1],
             [label2, input2, choose_button2],
-            [compress_button]
+            [compress_button, output_label]
          ]
 
 window = sg.Window("File Compressor", layout)
@@ -25,5 +26,6 @@ while True:
     filepaths = values['files'].split(";")
     dest_folder = values['folder']
     make_archive(filepaths, dest_folder)
+    window["output"].update(value="Compression completed!") # we access the output key (part of our output label) and update it with a message
 
 window.close()
