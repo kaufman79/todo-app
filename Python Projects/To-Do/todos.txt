@@ -2,6 +2,5 @@ sleep
 cry
 run
 sleep
-go home
 make test
 nap
