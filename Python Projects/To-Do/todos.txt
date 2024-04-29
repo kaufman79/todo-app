@@ -1,8 +1,7 @@
 sleep
 cry
 run
-run!
 sleep
-run!
-run!
-run!
+go home
+make test
+nap
