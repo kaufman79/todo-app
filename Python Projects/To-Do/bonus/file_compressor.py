@@ -3,7 +3,7 @@ from zip_creator import make_archive
 
 label1 = sg.Text("select files to compress")
 input1 = sg.Input()
-choose_button1 = sg.FilesBrowse("Choose", key = "files") # this is a special button already programmed to select files
+choose_button1 = sg.FilesBrowse("Choose", key="files") # this is a special button already programmed to select files
 
 label2 = sg.Text("select destination folder")
 input2 = sg.Input()

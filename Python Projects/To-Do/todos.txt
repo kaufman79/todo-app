@@ -1,5 +1,4 @@
 sleep
 cry
 run
-sleep
 make test

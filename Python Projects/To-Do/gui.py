@@ -1,7 +1,11 @@
 import functions
 import PySimpleGUI as sg
 import time
+import os
 
+if not os.path.exists("todos.txt"):
+    with open("todos.txt", "w") as file: # creates the file
+        pass    # doesnt do anything, just moves to next thing. We need it cause the syntax requires something here.
 
 clock = sg.Text('', key="clock")
 # stuff related to adding a to_do
