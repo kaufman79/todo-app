@@ -1,6 +1,5 @@
 sleep
-cry
-run
 make test
 clean home
 vacuum stairs
+go home!
